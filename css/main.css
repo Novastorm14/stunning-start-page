@@ -14,6 +14,12 @@ body{
   padding: 0;
 }
 
+main {
+  padding: 0 1rem;
+  margin: 0;
+  background-color: #bebebe;
+}
+
 header {
     display: grid;
     grid-template-columns: auto 10rem auto;
@@ -31,17 +37,19 @@ h1 {
 }
 
 h2 {
-  font-family: "PT Sans Narrow" sans-serif;
-
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #323232;
+  padding-left: 1rem;
 }
 
 h3 {
-  font-family: "PT Sans Narrow" sans-serif;
+  grid-area: bottom;
+  z-index: 1;
+  font-family: "PT Sans Narrow", sans-serif;
   font-style: italic;
   text-align: center;
-  order: 1;
-  font-weight: lighter;
-  background-color: #bebebe
+  padding: 1.125rem;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 section img {
@@ -81,7 +89,7 @@ li a {
   color: #fff;
   border: 2px solid #960062;
   border-radius: 6px;
-  font-family: "PT Sans Narrow" sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.25rem;
 }
 
@@ -103,19 +111,23 @@ nav {
 }
 
 section div {
-  order: -3;
+  grid-area: top;
+  z-index: 1;
   justify-self: end;
   flex-direction: row-reverse;
   align-items: center;
   display: flex;
   padding: 0;
   background-color: rgba(0, 0, 0, .1);
-  margin: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0;
   border-radius: 1em 0 0 1em;
 }
 
 img {
   width: 100%;
+  display: block;
 }
 
 div img {
@@ -126,4 +138,14 @@ section strong {
   font-style: italic;
   font-size: 1.125rem;
   font-weight: normal;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: #323232;
 }
